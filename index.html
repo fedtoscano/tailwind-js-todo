@@ -11,28 +11,47 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- FONT AWESOME CDN -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>To do list</title>
 </head>
 <body>
 
-<header class="flex justify-center content-center bg-green-400 p-8 mb-8">
+<header class="flex justify-center content-center bg-green-400 p-8">
     <div class="title-container">
         <h1 class="text-center text-white text-6xl mb-1">To do app</h1>
         <h3 class="text-white italic">everything you need to organize your day</h3>
     </div>
 </header>
-    <main>
+    <main class="bg-slate-300">
 
-        <div class="container w-[1200px] my-0 mx-auto flex flex-col justify-center content-center mb-8">
-            <div class="nav flex justify-center content-center">
+        <div class="container max-w-[1200px] my-0 mx-auto flex flex-col justify-center content-center">
+            <div class="nav flex justify-center content-center mb-8 mt-8">
                 <button class="py-1 px-8 border-green-900 border bg-slate-700 hover:bg-green-600 text-white">Today</button>
                 <button class="py-1 px-8 border-green-900 border bg-slate-700 hover:bg-green-600 text-white">Pending</button>
                 <button class="py-1 px-8 border-green-900 border bg-slate-700 hover:bg-green-600 text-white">Overdue</button>
             </div>
 
-            <section id="tasks"></section>
+            <section id="tasks">
+                <div class="task-title flex justify-between mb-4">
+                    <h2 class="font-semibold text-3xl">Tasks</h2>
+                    <button class="text-white py-1 px-5 bg-green-400 hover:bg-green-600">Add task</button>
+                </div>
+
+                <div class="task-content">
+                    <article class="bg-white flex justify-between px-8 py-4 mb-3">
+                        <p class="task-text font-semibold">Task Title</p>
+                        <p class="task-date text-slate-400">added Tue Oct 17, 2023</p>
+                        <p class="task-actions">
+                            <span id="edit"><i class="fa-solid fa-pen"></i></span>
+                            <span id="status" class="bg-red-600 rounded-full"><i class="fa-regular fa-circle"></i></span>
+                        </p>
+                    </article>
+                </div>
+            </section>
+            <section id="completed">
+                
+            </section>
 
 
 
