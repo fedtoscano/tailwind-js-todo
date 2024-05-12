@@ -16,7 +16,31 @@
     <title>To do list</title>
 </head>
 <body>
-    
+
+<header class="flex justify-center content-center bg-green-400 p-8 mb-8">
+    <div class="title-container">
+        <h1 class="text-center text-white text-6xl mb-1">To do app</h1>
+        <h3 class="text-white italic">everything you need to organize your day</h3>
+    </div>
+</header>
+    <main>
+
+        <div class="container w-[1200px] my-0 mx-auto flex flex-col justify-center content-center mb-8">
+            <div class="nav flex justify-center content-center">
+                <button class="py-1 px-8 border-green-900 border bg-slate-700 hover:bg-green-600 text-white">Today</button>
+                <button class="py-1 px-8 border-green-900 border bg-slate-700 hover:bg-green-600 text-white">Pending</button>
+                <button class="py-1 px-8 border-green-900 border bg-slate-700 hover:bg-green-600 text-white">Overdue</button>
+            </div>
+
+            <section id="tasks"></section>
+
+
+
+
+        </div>
+    </main>
+
+
     <!-- JS SCRIPT -->
     <script src="./script/script.js"></script>
 </body>
