@@ -17,12 +17,13 @@
 </head>
 <body>
 
-<header class="flex justify-center content-center bg-green-400 p-8">
+    <header class="flex justify-center content-center bg-green-400 p-8">
     <div class="title-container">
         <h1 class="text-center text-white text-6xl mb-1">To do app</h1>
         <h3 class="text-white italic">everything you need to organize your day</h3>
     </div>
-</header>
+    </header>
+
     <main class="bg-slate-300">
 
         <div class="container max-w-[1200px] my-0 mx-auto flex flex-col justify-center content-center">
@@ -33,7 +34,7 @@
             </div>
 
             <section id="tasks">
-                <div class="task-title flex justify-between mb-4">
+                <div class="task-title flex justify-between mb-4 px-4">
                     <h2 class="font-semibold text-3xl">Tasks</h2>
                     <button class="text-white py-1 px-5 bg-green-400 hover:bg-green-600">Add task</button>
                 </div>
@@ -43,14 +44,24 @@
                         <p class="task-text font-semibold">Task Title</p>
                         <p class="task-date text-slate-400">added Tue Oct 17, 2023</p>
                         <p class="task-actions">
-                            <span id="edit"><i class="fa-solid fa-pen"></i></span>
-                            <span id="status" class="bg-red-600 rounded-full"><i class="fa-regular fa-circle"></i></span>
+                            <button class="rounded-full hover:bg-slate-100 p-1">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="rounded-full hover:bg-slate-100 p-1">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
                         </p>
                     </article>
+                    
                 </div>
             </section>
+
             <section id="completed">
-                
+                <div class="task-title flex px-4 mb-4 gap-3" >
+                    <h2 class="font-semibold text-3xl content-center">Completed</h2>
+                    <i class="fa-solid fa-chevron-down content-center"></i>
+                </div>
             </section>
 
 
@@ -59,6 +70,9 @@
         </div>
     </main>
 
+    <footer class="bg-green-400 flex p-8 text-white justify-center">
+        <h1>Made with love by fedToscano</h1>
+    </footer>
 
     <!-- JS SCRIPT -->
     <script src="./script/script.js"></script>
