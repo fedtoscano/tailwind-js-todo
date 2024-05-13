@@ -1,11 +1,10 @@
 //FUNZIONE CHE ATTIVA L'OFF CANVAS
-
 const addTaskBtn = document.getElementById('add-task');
 //definisco la funzione AddTask
 function addTaskDisplay(){
-    document.body.classList.toggle("opacity-40");
+    const fullSite= document.querySelector(".fullsite")
+    fullSite.classList.toggle("opacity-btn");
     const newTask= document.getElementById('new-task');
-
     newTask.classList.toggle("hidden")
 }
 
