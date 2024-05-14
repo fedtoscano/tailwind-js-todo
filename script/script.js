@@ -31,34 +31,40 @@ const taskNotes = document.querySelector(".task-notes");
 const taskContent = document.getElementById("task-content")
 const newTodoItem = document.createElement('article');
 
-function addTask(){
-//Definisco la funzione per aggiungere la task
+function addTask() {
+    //Programmo i nuovi elementi
     const newTodoItem = document.createElement("article");
 
     const innerTaskText = document.createElement("p");
         innerTaskText.classList.add("font-semibold");
         innerTaskText.innerHTML = offcTaskTitle;
-        
 
     const innerTaskPriority = document.createElement("p");
         innerTaskPriority.classList.add("italic");
-        innerTaskPriority.innerHTML = offcTaskPriority
+        innerTaskPriority.innerHTML = offcTaskPriority;
 
     const innerTaskDate = document.createElement("p");
         innerTaskDate.classList.add("text-slate-400");
-        innerTaskDate.innerHTML = offcTaskDate.toString();
+        innerTaskDate.innerHTML = offcTaskDate;
 
     const innerTaskNotes = document.createElement("p");
-        const innerSticky = document.createElement(button);
+    const innerSticky = document.createElement("button");
         innerSticky.classList.add("rounded-full", "hover:bg-slate-100", "p-1");
-        innerSticky.outerHTML = `<i class="fa-solid fa-note-sticky"></i>`;
+        innerSticky.innerHTML = `<i class="fa-solid fa-note-sticky"></i>`;
 
-    const innerTaskActions = document.createElement("p")
+    const innerTaskActions = document.createElement("p");
 
 
-    newTodoItem.classList.add("bg-white", "flex", "justify-between", "px-8", "py-4","mb-3", "h-28", "w-28");
-    newTodoItem.appendChild(innerTaskText, innerTaskPriority, innerTaskDate, innerTaskNotes, innerTaskActions)
+    newTodoItem.classList.add("bg-white", "flex", "justify-between", "px-8", "py-4", "mb-3");
 
+    // Aggiungo gli elementi figlio al nuovo elemento
+    newTodoItem.appendChild(innerTaskText);
+    newTodoItem.appendChild(innerTaskPriority);
+    newTodoItem.appendChild(innerTaskDate);
+    newTodoItem.appendChild(innerTaskNotes);
+    newTodoItem.appendChild(innerTaskActions);
+
+    // Aggiungo il nuovo elemento al contenitore desiderato
     taskContent.appendChild(newTodoItem);
 }
 
