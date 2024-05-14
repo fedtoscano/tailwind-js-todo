@@ -36,7 +36,7 @@ function addTask() {
     const newTodoItem = document.createElement("article");
 
     const innerTaskText = document.createElement("p");
-        innerTaskText.classList.add("font-semibold");
+        innerTaskText.classList.add("font-semibold","max-w-[150px]");
         innerTaskText.innerHTML = offcTaskTitle;
 
     const innerTaskPriority = document.createElement("p");
@@ -49,10 +49,25 @@ function addTask() {
 
     const innerTaskNotes = document.createElement("p");
     const innerSticky = document.createElement("button");
-        innerSticky.classList.add("rounded-full", "hover:bg-slate-100", "p-1");
-        innerSticky.innerHTML = `<i class="fa-solid fa-note-sticky"></i>`;
+            innerSticky.classList.add("rounded-full", "hover:bg-slate-100", "p-1");
+            innerSticky.innerHTML = `<i class="fa-solid fa-note-sticky"></i>`;
+    innerTaskNotes.appendChild(innerSticky);
+    
+    const innerTaskActions = document.createElement("p");  
+        const innerTaskIcon=document.createElement("button")
+            innerTaskIcon.classList.add("rounded-full", "hover:bg-slate-100", "p-1");
+            innerTaskActions.innerHTML= `<i class="fa-solid fa-pen"></i>`
+            
+        const innerTaskIcon2=document.createElement("button")
+            innerTaskIcon2.classList.add("rounded-full", "hover:bg-slate-100", "p-1");
+            innerTaskIcon2.innerHTML= `<i class="fa-solid fa-trash-can"></i>`
+            
 
-    const innerTaskActions = document.createElement("p");
+    innerTaskActions.appendChild(innerTaskIcon)
+    innerTaskActions.appendChild(innerTaskIcon2)
+
+
+
 
 
     newTodoItem.classList.add("bg-white", "flex", "justify-between", "px-8", "py-4", "mb-3");
