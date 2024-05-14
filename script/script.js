@@ -1,21 +1,15 @@
 //FUNZIONE CHE ATTIVA L'OFF CANVAS
 const addTaskBtn = document.getElementById('add-task');
-//definisco la funzione AddTask
+
+
 function addTaskDisplay(){
+    const newTask= document.getElementById('new-task');
     const fullSite= document.querySelector(".fullsite")
     fullSite.classList.toggle("opacity-btn");
-    const newTask= document.getElementById('new-task');
     newTask.classList.toggle("hidden")
 }
 //seleziono il bottone e applico un event listener
 addTaskBtn.addEventListener('click', addTaskDisplay)
-
-
-//elementi DOM dell'offcanvas
-const offcTaskTitle = document.getElementById('offc-task-title').value;
-const offcTaskPriority = document.getElementById('offc-task-priority').value;
-const offcTaskDate = document.getElementById('offc-task-date').value;
-const offcTaskNotes = document.getElementById('offc-task-notes').value;
 
 const offcanvasClose = document.getElementById('offcanvas-close');
 const offcanvasAdd = document.getElementById('offcanvas-add');
@@ -26,14 +20,20 @@ const taskPriority = document.querySelector(".task-priority");
 const taskDate = document.querySelector(".task-date");
 const taskNotes = document.querySelector(".task-notes");
 
-
 //sezione nel main 
 const taskContent = document.getElementById("task-content")
 const newTodoItem = document.createElement('article');
 
 function addTask() {
+    //elementi DOM dell'offcanvas
+        const offcTaskTitle = document.getElementById('offc-task-title').value;
+        const offcTaskPriority = document.getElementById('offc-task-priority').value;
+        const offcTaskDate = document.getElementById('offc-task-date').value;
+        const offcTaskNotes = document.getElementById('offc-task-notes').value;
+
     //Programmo i nuovi elementi
     const newTodoItem = document.createElement("article");
+    newTodoItem.classList.add("bg-white", "flex", "justify-between", "px-8", "py-4", "mb-3");
 
     const innerTaskText = document.createElement("p");
         innerTaskText.classList.add("font-semibold","max-w-[150px]");
@@ -54,23 +54,16 @@ function addTask() {
     innerTaskNotes.appendChild(innerSticky);
     
     const innerTaskActions = document.createElement("p");  
-        const innerTaskIcon=document.createElement("button")
+        const innerTaskIcon=document.createElement("button");
             innerTaskIcon.classList.add("rounded-full", "hover:bg-slate-100", "p-1");
-            innerTaskActions.innerHTML= `<i class="fa-solid fa-pen"></i>`
+            innerTaskActions.innerHTML= `<i class="fa-solid fa-pen"></i>`;
             
-        const innerTaskIcon2=document.createElement("button")
+        const innerTaskIcon2=document.createElement("button");
             innerTaskIcon2.classList.add("rounded-full", "hover:bg-slate-100", "p-1");
-            innerTaskIcon2.innerHTML= `<i class="fa-solid fa-trash-can"></i>`
-            
+            innerTaskIcon2.innerHTML= `<i class="fa-solid fa-trash-can"></i>`;
+    innerTaskActions.appendChild(innerTaskIcon);
+    innerTaskActions.appendChild(innerTaskIcon2);
 
-    innerTaskActions.appendChild(innerTaskIcon)
-    innerTaskActions.appendChild(innerTaskIcon2)
-
-
-
-
-
-    newTodoItem.classList.add("bg-white", "flex", "justify-between", "px-8", "py-4", "mb-3");
 
     // Aggiungo gli elementi figlio al nuovo elemento
     newTodoItem.appendChild(innerTaskText);
@@ -81,6 +74,15 @@ function addTask() {
 
     // Aggiungo il nuovo elemento al contenitore desiderato
     taskContent.appendChild(newTodoItem);
+
+    //resetto i valori a 0
+    offcTaskTitle.value=""
+    offcTaskPriority.value=""
+    offcTaskDate.value=""
+    offcTaskNotes.value=""
+
+    //chiudo la finestra
+    addTaskDisplay()
 }
 
 offcanvasAdd.addEventListener('click', addTask)
