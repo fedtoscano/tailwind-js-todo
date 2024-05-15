@@ -43,6 +43,7 @@
                     <button class="bg-green-600 rounded-md text-white py-1 px-3" id="offcanvas-add">Add Task</button>
                 </div>
             </section>
+
 <div class="fullsite">
     <header class="flex justify-center content-center bg-green-400 p-8">
     <div class="title-container">
@@ -51,9 +52,9 @@
     </div>
     </header>
 
-    <main class="bg-slate-300 h-screen min-h[800px]">
+    <main class="bg-slate-300 min-h-screen">
 
-        <div class="container max-w-[1200px] my-0 mx-auto flex flex-col justify-center content-center relative">
+        <div class="container max-w-[1200px] my-0 mx-auto flex flex-col justify-center content-center">
 
             <!-- NAV BUTTONS -->
             <div class="nav flex justify-center content-center mb-8 mt-8">
@@ -88,38 +89,9 @@
                             </button>
                         </p>
                     </article>
-
-                    
                 </div>
             </section>
 
-            <!-- ADD NEW TASK -->
-            <section id="new-task" class="absolute top-0 bottom-0 left-0 right-0 m-auto bg-black w-[400px] h-[500px] p-10 rounded-xl hidden opacity-100">
-                <div class="form flex flex-col justify-center content-center gap-4 mb-4">
-                    <h2>Add new Task</h2>
-
-                    <label for="Title">Title</label>
-                    <input type="text" placeholder="Add a task title">
-
-                    <label for="priority" class="w-1/3">Select Priority</label>
-                    <select name="priority" class="w-1/3" id="priority">
-                        <option value="low">Low</option>
-                        <option value="middle">Middle</option>
-                        <option value="high">High</option>
-                    </select>
-
-                    <label for="deadline" class="w-1/3">Deadline</label>
-                    <input type="date" class="w-1/3" name="date" id="date">
-
-                    <label for="notes">Notes</label>
-                    <input type="text" name="notes" id="notes" placeholder="Add any note to your task">
-
-                </div>
-                <div class="new-task-buttons flex justify-end gap-4">
-                    <button class="bg-green-600 rounded-md py-1 px-3">Close</button>
-                    <button class="bg-green-600 rounded-md text-white py-1 px-3">Add Task</button>
-                </div>
-            </section>
             <!-- COMPLETED TASK SECTION -->
             <section id="completed">
                 <div class="task-title flex px-4 mb-4 gap-3" >
@@ -127,17 +99,13 @@
                     <i class="fa-solid fa-chevron-down content-center"></i>
                 </div>
             </section>
-
-
-
-
         </div>
     </main>
 
-    <footer class="bg-green-400 flex p-8 text-white justify-center">
-        <h1>Made with love by fedToscano</h1>
-    </footer>
 </div>
+<footer class="bg-green-400 flex p-8 text-white justify-center">
+    <h1>Made with love by fedToscano</h1>
+</footer>
 
     <!-- JS SCRIPT -->
     <script src="./script/script.js"></script>
