@@ -29,7 +29,8 @@ const offcTaskNotes = document.getElementById('offc-task-notes');
 function addTask() {
 if(!(offcTaskTitle.value)|| !(offcTaskPriority.value)|| !(offcTaskDate.value)){
     alert("Please insert all values!")
-}else{   //Programmo i nuovi elementi
+}else{   
+        //Programmo i nuovi elementi
         const newTodoItem = document.createElement("article");
         newTodoItem.classList.add("bg-white", "flex", "justify-between", "px-8", "py-4", "mb-3");
 
@@ -74,7 +75,7 @@ if(!(offcTaskTitle.value)|| !(offcTaskPriority.value)|| !(offcTaskDate.value)){
         //funzione che mostra le note relative ad una task CHE AGGIUNGO DINAMICAMENTE
         innerSticky.addEventListener('click', function(){
             noteDisplayEl.classList.toggle("hidden")
-        })
+            })
         
         noteDisplayEl.appendChild(noteDisplayTextEl);
         innerTaskNotes.appendChild(noteDisplayEl);
@@ -113,8 +114,8 @@ if(!(offcTaskTitle.value)|| !(offcTaskPriority.value)|| !(offcTaskDate.value)){
         offcTaskNotes.value = ""
     }
 }
-    
-//funzione che mostra le note relative ad una task GIA' PRESENTE NELL'HTML (da cancellare più avanti)
+
+//! funzione che mostra le note relative ad una task GIA' PRESENTE NELL'HTML (da cancellare più avanti)
 const displayNotesBtn = document.querySelector(".display-notes");
 const noteDisplay = document.querySelector(".note-display")
 displayNotesBtn.addEventListener('click', function(){
