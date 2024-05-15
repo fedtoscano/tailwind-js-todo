@@ -44,6 +44,8 @@
                 </div>
             </section>
 
+
+
 <div class="fullsite">
     <header class="flex justify-center content-center bg-green-400 p-8">
     <div class="title-container">
@@ -75,11 +77,19 @@
                         <p class="task-text font-semibold max-w-[150px]">Lorem ipsum dolor sit amet.</p>
                         <p class="task-priority italic">normal</p>
                         <p class="task-date text-slate-400">2024-05-11</p>
-                        <p class="task-notes">
-                            <button class="rounded-full hover:bg-slate-100 p-1">
+                        <section class="task-notes relative">
+
+                            <!-- DISPLAY NOTES OFFCANVA -->
+                            <div id="" class="note-display w-60 h-52 bg-stone-100 text-black italic absolute right-4 top-4 rounded-xl p-6 hidden" >
+                                <p id="note-display-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, numquam.</p>
+                            </div>
+
+                            <!-- BOTTONE PER MOSTRARE LE NOTE -->
+                            <button class="rounded-full hover:bg-slate-100 p-1 display-notes">
                                 <i class="fa-solid fa-note-sticky"></i>
                             </button>
-                        </p>
+
+                        </section>
                         <p class="task-actions">
                             <button class="rounded-full hover:bg-slate-100 p-1">
                                 <i class="fa-solid fa-pen"></i>
