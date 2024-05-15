@@ -60,7 +60,7 @@ function addTask() {
         innerTaskNotes.classList.add("task-notes", "relative");
 
     const noteDisplayEl = document.createElement("div")
-            noteDisplayEl.classList.add("w-60", "h-52", "bg-stone-100", "text-black", "italic", "absolute", "right-4","top-4", "rounded-xl", "p-6", "note-display","hidden") //aggiungere qui le classi del div)
+            noteDisplayEl.classList.add("z-10", "w-60", "h-52", "bg-stone-100", "text-black", "italic", "absolute", "right-4","top-4", "rounded-xl", "p-6", "note-display","hidden") //aggiungere qui le classi del div)
     
     const noteDisplayTextEl = document.createElement("p")
             noteDisplayTextEl.innerHTML = offcTaskNotes.value;
