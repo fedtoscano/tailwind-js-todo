@@ -38,8 +38,16 @@ function addTask() {
 
     //PRIORITA' DELLA TASK
     const innerTaskPriority = document.createElement("p");
-        innerTaskPriority.classList.add("italic");
+    // DO' UN COLORE DIVERSO AL TESTO IN BASE ALLA PRIORITA' DELLA TASK
         innerTaskPriority.innerHTML = offcTaskPriority.value;
+        innerTaskPriority.classList.add("italic");
+            if(offcTaskPriority.value === "low"){
+                innerTaskPriority.classList.add("text-yellow-500");
+            }else if(offcTaskPriority.value === "middle"){
+                innerTaskPriority.classList.add("text-yellow-700");
+            }else {
+                innerTaskPriority.classList.add("text-red-600");
+            }
 
     // DATA DELLA TASK
     const innerTaskDate = document.createElement("p");
@@ -97,7 +105,7 @@ function addTask() {
 
     //resetto i valori a 0
     offcTaskTitle.value = ""
-    offcTaskPriority.value = ""
+    // offcTaskPriority.value = ""
     offcTaskDate.value = ""
     offcTaskNotes.value = ""
 }
